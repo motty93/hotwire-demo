@@ -1,7 +1,7 @@
-POSTGRES_USER='rails7'
-POSTGRES_PASSWORD='rails7'
+POSTGRES_USER='hotwire_demo'
+POSTGRES_PASSWORD='hotwire_demo'
 POSTGRES_HOST_AUTH_METHOD=trust
-POSTGRES_DB='rails7_development'
-POSTGRES_PRODUCTION_DB='rails7_production'
+POSTGRES_DB='hotwire_demo_development'
+POSTGRES_PRODUCTION_DB='hotwire_demo_production'
 POSTGRES_HOST='postgres'
 POSTGRES_PORT=5432
