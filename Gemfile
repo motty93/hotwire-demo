@@ -16,6 +16,7 @@ gem "kredis"
 gem "foreman", "~> 0.87.2"
 gem "dotenv-rails", "~> 2.7"
 gem "bootsnap", require: false
+gem "kaminari"
 
 group :development, :test do
   gem 'annotate'                            # modelにテーブルのカラムをコメントで出力
