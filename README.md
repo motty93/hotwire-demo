@@ -35,3 +35,16 @@ turbo自体はjsのライブラリなのでrails依存ではない。
 Turboと相性がいいjsライブラリ。レールを敷いてくれるのでカオスにならない。
 ## Stradas
 Hotwire用のモバイルアプリケーションライブラリ。まだ詳しいことはわからん。
+
+## Hotwire特徴
+- SSR
+- fetch APIを利用した非同期リクエスト→HTMLをレスポンス
+- 既存の資産（gemなど）をそのまま利用できる
+
+## Hotwireまとめ
+- 通常の画面遷移： HTMLをまるごと返る
+- Turbo Drive: <body>だけを更新する
+- Turbo Frames: <turbo-frame>だけ更新
+- Turbo Streams: 複数のHTML要素を更新する
+- Stimulus: jsを使ってTurboで出来ないことをやる
+
