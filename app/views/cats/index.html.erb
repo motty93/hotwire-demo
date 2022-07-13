@@ -9,7 +9,6 @@
   </div>
 
   <div id="cats" class="min-w-full">
-    <%= paginate @cats %>
     <%= search_form_for @q do |f| %>
       <%= f.label :name_cont, '名前' %>
       <%= f.search_field :name_cont %>
@@ -20,8 +19,22 @@
 
       <%= link_to 'clear', cats_path %>
     <% end %>
-    <%= sort_link(@q, :name) %>
-    <%= sort_link(@q, :age) %>
-    <%= render @cats %>
+
+    <div class="overflow-x-auto mt-10">
+      <table class="table w-full">
+        <thead class="flex flex-col">
+          <tr class="flex">
+            <th class="grow"><%= sort_link(@q, :id) %></th>
+            <th class="grow text-left"><%= sort_link(@q, :name) %></th>
+            <th class="grow"><%= sort_link(@q, :age) %></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="flex flex-col">
+          <%= render @cats %>
+        </tbody>
+      </table>
+    </div>
   </div>
+  <%= paginate @cats %>
 </div>
