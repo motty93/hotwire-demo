@@ -1,22 +1,22 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.2"
+ruby '3.1.2'
 
-gem "rails", "~> 7.0.2"
-gem "sprockets-rails"
-gem "pg", "~> 1.1"
-gem "puma", "~> 5.0"
-gem "importmap-rails"
-gem "turbo-rails"
-gem "stimulus-rails"
-gem "tailwindcss-rails"
-gem "redis", "~> 4.0"
-gem "kredis"
-gem "foreman", "~> 0.87.2"
-gem "dotenv-rails", "~> 2.7"
-gem "bootsnap", require: false
-gem "kaminari"
+gem 'bootsnap', require: false
+gem 'dotenv-rails', '~> 2.7'
+gem 'foreman', '~> 0.87.2'
+gem 'importmap-rails'
+gem 'kaminari'
+gem 'kredis'
+gem 'pg', '~> 1.1'
+gem 'puma', '~> 5.0'
+gem 'rails', '~> 7.0.2'
+gem 'redis', '~> 4.0'
+gem 'sprockets-rails'
+gem 'stimulus-rails'
+gem 'tailwindcss-rails'
+gem 'turbo-rails'
 
 group :development, :test do
   gem 'annotate'                            # modelにテーブルのカラムをコメントで出力
@@ -39,17 +39,17 @@ group :development, :test do
   gem 'prettier'
   gem 'spring'
   gem 'spring-commands-rspec'
-  gem "debug", platforms: %i[mri mingw x64_mingw]
+  gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
   gem 'listen', '~> 3.3'
-  gem "web-console"
+  gem 'web-console'
 end
 
 group :test do
   gem 'database_cleaner'
 end
 
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem 'tzinfo-data', platforms: %i[ mingw mswin x64_mingw jruby ]
