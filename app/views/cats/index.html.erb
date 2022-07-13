@@ -9,6 +9,19 @@
   </div>
 
   <div id="cats" class="min-w-full">
+    <%= paginate @cats %>
+    <%= search_form_for @q do |f| %>
+      <%= f.label :name_cont, '名前' %>
+      <%= f.search_field :name_cont %>
+
+      <%= f.label :age_eq, '年齢' %>
+      <%= f.search_field :age_eq %>
+      <%= f.submit %>
+
+      <%= link_to 'clear', cats_path %>
+    <% end %>
+    <%= sort_link(@q, :name) %>
+    <%= sort_link(@q, :age) %>
     <%= render @cats %>
   </div>
 </div>
